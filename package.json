@@ -1,0 +1,19 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jest.config.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ireneBird/algorithms-learning.git"
+  },
+  "author": "Irina Nesterenko <irenesterenko@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ireneBird/algorithms-learning/issues"
+  },
+  "homepage": "https://github.com/ireneBird/algorithms-learning#readme"
+}
