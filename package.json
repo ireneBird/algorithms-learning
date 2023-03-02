@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/ireneBird/algorithms-learning/issues"
   },
-  "homepage": "https://github.com/ireneBird/algorithms-learning#readme"
+  "homepage": "https://github.com/ireneBird/algorithms-learning#readme",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.3",
+    "ts-jest": "^29.0.5"
+  },
+  "dependencies": {
+    "typescript": "^4.9.5"
+  }
 }
