@@ -30,14 +30,14 @@ class BubbleSort {
   }
 }
 
-const arr = new BubbleSort(5);
-arr.push(3);
-arr.push(10);
-arr.push(1);
-arr.push(0);
-arr.push(4);
+// const arr = new BubbleSort(5);
+// arr.push(3);
+// arr.push(10);
+// arr.push(1);
+// arr.push(0);
+// arr.push(4);
 
-console.log(arr.get());
-arr.bubbleSort();
+// console.log(arr.get());
+// arr.bubbleSort();
 
-console.log(arr.get());
+// console.log(arr.get());

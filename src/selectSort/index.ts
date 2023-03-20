@@ -2,7 +2,7 @@ class selectSortArray {
   #arr: Array<any>;
   #countElement: number;
 
-  constructor(max: number) {
+  constructor(max?: number) {
     this.#arr = new Array(max);
     this.#countElement = 0;
   }
@@ -20,7 +20,7 @@ class selectSortArray {
 
       for (inner = outer + 1; inner < this.#countElement; inner++) {
         if (this.#arr[inner] < this.#arr[min]) {
-          min = this.#arr[inner];
+          min = inner;
         }
       }
 
@@ -39,13 +39,15 @@ class selectSortArray {
   }
 }
 
-const sort = new selectSortArray(6);
+const sort = new selectSortArray();
 sort.push(2);
 sort.push(0);
 sort.push(5);
 sort.push(1);
 sort.push(34);
 sort.push(7);
+
+console.log(sort.get());
 
 sort.selectionSort();
 
