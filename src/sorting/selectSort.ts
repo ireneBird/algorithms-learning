@@ -1,4 +1,4 @@
-class selectSortArray {
+class SelectSortArray {
   #arr: Array<any>;
   #countElement: number;
 
@@ -39,7 +39,7 @@ class selectSortArray {
   }
 }
 
-const sort = new selectSortArray();
+const sort = new SelectSortArray();
 sort.push(2);
 sort.push(0);
 sort.push(5);
