@@ -33,7 +33,7 @@ var isPalindrome = function (s) {
   return true;
 };
 
-// console.log(isPalindrome("A man, a plan, a canal: Panama"));
+console.log(isPalindrome("A man, a plan, a canal: Panama"));
 // console.log(isPalindrome("ab_a"));
 
 // Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
@@ -104,11 +104,72 @@ var firstUniqChar = function (s) {
 // console.log(firstUniqChar("aabb"));
 
 const twoSumm = (nums, target) => {
+  // for (let i = 0; i < nums.length; i++) {
+  //   const indexSecond = nums.indexOf(target - nums[i]);
+  //   if (indexSecond >= 0 && indexSecond !== i) return [i, indexSecond];
+  // }
+  // return [];
+
+  const map = new Map();
+
   for (let i = 0; i < nums.length; i++) {
-    const indexSecond = nums.indexOf(target - nums[i]);
-    if (indexSecond >= 0 && indexSecond !== i) return [i, indexSecond].sort();
+    const complement = target - nums[i];
+
+    if (map.has(complement)) return [i, map.get(complement)];
+
+    map.set(nums[i], i);
   }
+
+  return [];
 };
 
 // console.log(twoSumm([2, 7, 22, 12], 9));
 // console.log(twoSumm([3, 3], 6));
+
+var rotate = function (nums, k) {
+  let step = 0;
+
+  while (step < k) {
+    nums.unshift(nums.pop());
+    step++;
+  }
+
+  return nums;
+};
+
+// console.log(rotate([1, 2], 3)); //[2,1]
+// console.log(rotate([1, 2, 3], 4)); //[3,1,2]
+
+var intersect = function (nums1, nums2) {
+  // const map = nums1.reduce((acc, num) => {
+  //   console.log(num);
+  //   if (acc[num]) {
+  //     acc[num] += 1;
+  //   } else {
+  //     acc[num] = 1;
+  //   }
+
+  //   return acc;
+  // }, {});
+
+  // return nums2.filter((num) => {
+  //   if (map[num]) {
+  //     map[num] -= 1;
+  //     return true;
+  //   }
+  // });
+
+  const res = [];
+
+  nums1.map((num) => {
+    if (nums2.includes(num)) {
+      res.push(num);
+      nums2.splice(nums2.indexOf(num), 1);
+    }
+  });
+
+  return res;
+};
+
+// console.log(intersect([4, 9, 5], [9, 4, 9, 8, 4])); //[4,9]
+// console.log(intersect([1, 2, 2, 1], [2])); //[2]

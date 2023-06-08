@@ -14,12 +14,12 @@ class BubbleSort {
 
   bubbleSort() {
     let out, inner;
-    for (out = 0; out < this.#countElements; out++) {
-      for (inner = out + 1; inner < this.#countElements; inner++) {
-        if (this.#arr[out] > this.#arr[inner]) {
-          const temp = this.#arr[out];
-          this.#arr[out] = this.#arr[inner];
-          this.#arr[inner] = temp;
+    for (out = this.#countElements - 1; out > 1; out--) {
+      for (inner = 0; inner < out; inner++) {
+        if (this.#arr[inner] > this.#arr[inner + 1]) {
+          const temp = this.#arr[inner];
+          this.#arr[inner] = this.#arr[inner + 1];
+          this.#arr[inner + 1] = temp;
         }
       }
     }
@@ -30,14 +30,14 @@ class BubbleSort {
   }
 }
 
-// const arr = new BubbleSort(5);
-// arr.push(3);
-// arr.push(10);
-// arr.push(1);
-// arr.push(0);
-// arr.push(4);
+const ar = new BubbleSort(5);
+ar.push(3);
+ar.push(10);
+ar.push(1);
+ar.push(0);
+ar.push(4);
 
-// console.log(arr.get());
-// arr.bubbleSort();
+console.log(ar.get());
+ar.bubbleSort();
 
-// console.log(arr.get());
+console.log(ar.get());
